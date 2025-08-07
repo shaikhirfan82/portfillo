@@ -7,9 +7,12 @@
 /* main div */
 .mainbox
 {
-    /* background-color: cyan ; */
+    background-color: cyan ;
     width: 100%;
     height: 800px;
+    display: flex;
+     flex-direction: column;
+
 }
 .navbar
 {
@@ -20,6 +23,7 @@
     justify-content: center;
     position: fixed;
     top: 0px;
+
     z-index: 1;
     border-radius: 0px 0px 5px 5px;
    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -87,8 +91,6 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-      text-shadow: 1px 1px 1px #000, 
-               3px 3px 5px blue; 
 }
 .btn
 {
@@ -102,12 +104,32 @@ gap: 30px;
 padding: 20px;
 
 }
-.btn> button
-{
+.btn> button:hover{
+    color: white;
+    box-shadow: inset 0 -100 0 0 #430ef2;
+    background-color: #430ef2;
     width: 90px;
     height: 40px;
+    color: white;
     cursor: pointer;
-   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(154, 153, 177, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+    opacity: 0.90;
+}
+
+.btn>button:active
+{
+
+    transform: scale(0.9);
+}
+.btn> button
+{
+
+    width: 90px;
+    height: 40px;
+    color: #000000;
+    cursor: pointer;
+    box-shadow: rgba(111, 111, 113, 0.2) 0px 8px 24px;
 }
 .SRB
 {
@@ -122,7 +144,7 @@ padding: 20px;
 {
     width: 300px;
     height: 300px;
-    border: solid 1px ;
+    border:  groove 2px  ;
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     
@@ -132,4 +154,40 @@ padding: 20px;
     width: 100%;
     height: 100%;
     border-radius: 100%;
+}
+.TBox
+{
+    
+    width: 100%;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    position: relative;
+    top: 60px;
+    border-bottom:  solid  black;
+    
+    background-size: auto;
+   
+
+}
+.TLB
+{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(238, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TRB
+{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(234, 142, 142);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
